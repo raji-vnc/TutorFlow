@@ -145,7 +145,7 @@ function NewSessionContent() {
         </button>
 
         <div className="bg-white rounded-xl shadow p-8">
-          <h1 className="text-3xl font-bold mb-2">
+          <h1 className="text-3xl text-gray-800 font-bold mb-2">
             Schedule Session
           </h1>
 
@@ -165,7 +165,7 @@ function NewSessionContent() {
             className="space-y-5"
           >
             <div>
-              <label className="block mb-2 font-medium">
+              <label className="block mb-2 text-gray-800 font-medium">
                 Session Topic
               </label>
 
@@ -180,7 +180,7 @@ function NewSessionContent() {
             </div>
 
             <div>
-              <label className="block mb-2 font-medium">
+              <label className="block mb-2 text-gray-800 font-medium">
                 Date & Time
               </label>
 
@@ -188,7 +188,7 @@ function NewSessionContent() {
                 type="datetime-local"
                 value={scheduledAt}
                 onChange={(e) => setScheduledAt(e.target.value)}
-                className="w-full border rounded-lg p-3"
+                className="w-full border text-gray-800 rounded-lg p-3"
                 required
               />
             </div>
@@ -196,7 +196,7 @@ function NewSessionContent() {
             <button
               type="submit"
               disabled={saving}
-              className="w-full bg-green-600 text-white p-3 rounded-lg"
+              className="w-full bg-green-600 text-gray-800 p-3 rounded-lg"
             >
               {saving
                 ? "Scheduling..."

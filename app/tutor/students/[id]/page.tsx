@@ -321,18 +321,18 @@ if (saveError) {
               ← Back to Dashboard
             </button>
 
-            <h1 className="text-3xl font-bold">
+            <h1 className="text-3xl text-gray-800 font-bold">
               {student?.profiles?.full_name || "Student"}
             </h1>
 
-            <p className="text-gray-600">
+            <p className="text-gray-800">
               Student Profile
             </p>
           </div>
 
           <button
             onClick={handleLogout}
-            className="bg-red-500 text-white px-4 py-2 rounded-lg"
+            className="bg-red-500 text-gray-800 px-4 py-2 rounded-lg"
           >
             Logout
           </button>
@@ -348,48 +348,48 @@ if (saveError) {
           <>
             {/* Profile Details */}
             <div className="bg-white rounded-xl shadow p-6 mb-6">
-              <h2 className="text-xl font-bold mb-5">
+              <h2 className="text-xl text-gray-800 font-bold mb-5">
                 Learning Profile
               </h2>
 
               <div className="grid md:grid-cols-2 gap-6">
 
                 <div>
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-gray-800 text-sm">
                     Subject
                   </p>
 
-                  <p className="font-semibold">
+                  <p className="font-semibold text-gray-800">
                     {student.subject}
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-gray-800 text-sm">
                     Current Level
                   </p>
 
-                  <p className="font-semibold">
+                  <p className="font-semibold text-gray-800">
                     {student.current_level}
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-gray-800 text-sm">
                     Learning Goals
                   </p>
 
-                  <p className="font-semibold">
+                  <p className="font-semibold text-gray-800">
                     {student.learning_goals || "Not provided"}
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-gray-500 text-sm">
+                  <p className="text-gray-800 text-sm">
                     Weak Areas
                   </p>
 
-                  <p className="font-semibold">
+                  <p className="font-semibold text-gray-800">
                     {student.weak_areas || "Not provided"}
                   </p>
                 </div>
@@ -401,7 +401,7 @@ if (saveError) {
 {/* Student Progress */}
 <div className="mb-6">
 
-  <h2 className="text-2xl font-bold mb-4">
+  <h2 className="text-2xl text-gray-800 font-bold mb-4">
     Student Progress
   </h2>
 
@@ -409,44 +409,44 @@ if (saveError) {
 
     {/* Total Sessions */}
     <div className="bg-white rounded-xl shadow p-5">
-      <p className="text-gray-600 text-sm">
+      <p className="text-gray-800 text-sm">
         Total Sessions
       </p>
 
-      <p className="text-3xl font-bold mt-2">
+      <p className="text-3xl font-bold text-gray-800 mt-2">
         {totalSessions}
       </p>
     </div>
 
     {/* Completed */}
     <div className="bg-white rounded-xl shadow p-5">
-      <p className="text-gray-600 text-sm">
+      <p className="text-gray-800 text-sm">
         Completed
       </p>
 
-      <p className="text-3xl font-bold mt-2">
+      <p className="text-3xl font-bold text-gray-800 mt-2">
         {completedCount}
       </p>
     </div>
 
     {/* Upcoming */}
     <div className="bg-white rounded-xl shadow p-5">
-      <p className="text-gray-600 text-sm">
+      <p className="text-gray-800 text-sm">
         Upcoming
       </p>
 
-      <p className="text-3xl font-bold mt-2">
+      <p className="text-3xl font-bold text-gray-800 mt-2">
         {upcomingCount}
       </p>
     </div>
 
     {/* Completion Rate */}
     <div className="bg-white rounded-xl shadow p-5">
-      <p className="text-gray-600 text-sm">
+      <p className="text-gray-800 text-sm">
         Completion Rate
       </p>
 
-      <p className="text-3xl font-bold mt-2">
+      <p className="text-3xl font-bold text-gray-800 mt-2">
         {completionRate}%
       </p>
     </div>
@@ -461,7 +461,7 @@ if (saveError) {
   <div className="flex justify-between items-center mb-5">
 
     <div>
-      <h2 className="text-xl font-bold">
+      <h2 className="text-xltext-gray-800 font-bold">
         Sessions
       </h2>
 
@@ -476,7 +476,7 @@ if (saveError) {
           `/tutor/sessions/new?student=${studentId}`
         )
       }
-      className="bg-green-600 text-white px-4 py-2 rounded-lg"
+      className="bg-green-600 text-gray-800 px-4 py-2 rounded-lg"
     >
       + New Session
     </button>
@@ -485,7 +485,7 @@ if (saveError) {
 
   {sessions.length === 0 ? (
 
-    <p className="text-gray-500">
+    <p className="text-gray-800">
       No sessions scheduled yet.
     </p>
 
@@ -497,16 +497,16 @@ if (saveError) {
 
         <div
           key={session.id}
-          className="border rounded-lg p-4 flex justify-between items-center"
+          className="border rounded-lg p-4 text-gray-800 flex justify-between items-center"
         >
 
           <div>
 
-            <h3 className="font-semibold text-lg">
+            <h3 className="font-semibold text-gray-800 text-lg">
               {session.topic}
             </h3>
 
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-800 text-sm">
 
               {new Date(
                 session.scheduled_at
@@ -528,7 +528,7 @@ if (saveError) {
     onClick={() =>
       router.push(`/tutor/sessions/${session.id}`)
     }
-    className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm"
+    className="bg-blue-600 text-gray-800 px-4 py-2 rounded-lg text-sm"
   >
     Open Session
   </button>
@@ -549,11 +549,11 @@ if (saveError) {
             <div className="grid md:grid-cols-2 gap-6">
 
              <div className="bg-white rounded-xl shadow p-6">
-  <h2 className="text-xl font-bold mb-2">
+  <h2 className="text- text-gray-800 font-bold mb-2">
     AI Progress Summary
   </h2>
 
-  <p className="text-gray-600 mb-5">
+  <p className="text-gray-700 mb-5">
     Generate an AI analysis based on the student's
     completed tutoring sessions.
   </p>
@@ -561,7 +561,7 @@ if (saveError) {
   <button
     onClick={generateProgressSummary}
     disabled={generatingProgress}
-    className="bg-purple-600 text-white px-4 py-2 rounded-lg disabled:opacity-50"
+    className="bg-purple-600 text-gray-800 px-4 py-2 rounded-lg disabled:opacity-50"
   >
     {generatingProgress
       ? "Generating Progress Summary..."
@@ -570,7 +570,7 @@ if (saveError) {
 
   {progressSummary && (
     <div className="mt-6 bg-purple-50 border rounded-lg p-5">
-      <h3 className="text-lg font-bold mb-3">
+      <h3 className="text-lg text-gray-800 font-bold mb-3">
         Student Progress Analysis
       </h3>
 

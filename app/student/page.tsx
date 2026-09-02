@@ -167,7 +167,7 @@ if (progressError) {
 
   if (loading) {
     return (
-      <main className="min-h-screen bg-gray-100 p-8">
+      <main className="min-h-screen bg-gray-400 p-8">
         <p>Loading dashboard...</p>
       </main>
     );
@@ -180,7 +180,7 @@ if (progressError) {
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h1 className="text-3xl font-bold">
+            <h1 className="text-3xl text-gray-800 font-bold">
               Welcome, {profile?.full_name || "Student"}!
             </h1>
 
@@ -191,7 +191,7 @@ if (progressError) {
 
           <button
             onClick={handleLogout}
-            className="bg-red-500 text-white px-4 py-2 rounded-lg"
+            className="bg-red-500 text-gray-800 px-4 py-2 rounded-lg"
           >
             Logout
           </button>
@@ -205,7 +205,7 @@ if (progressError) {
 
         {/* Upcoming Sessions */}
         <div className="mb-10">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="text-2xl text-gray-800 font-bold mb-4">
             Upcoming Sessions
           </h2>
 
@@ -222,7 +222,7 @@ if (progressError) {
                   key={session.id}
                   className="bg-white p-6 rounded-xl shadow"
                 >
-                  <h3 className="text-xl font-bold">
+                  <h3 className="text-xl text-gray-800 font-bold">
                     {session.topic}
                   </h3>
 
@@ -244,7 +244,7 @@ if (progressError) {
         </div>
         {/* Homework */}
 <div className="mb-10">
-  <h2 className="text-2xl font-bold mb-4">
+  <h2 className="text-2xl text-gray-800 font-bold mb-4">
     Homework
   </h2>
 
@@ -255,13 +255,13 @@ if (progressError) {
       </p>
     </div>
   ) : (
-    <div className="grid md:grid-cols-2 gap-6">
+    <div className="grid md:grid-cols-2 text-gray-800 gap-6">
       {homeworkList.map((item) => (
         <div
           key={item.session_id}
           className="bg-yellow-50 border rounded-xl p-6"
         >
-          <h3 className="text-xl font-bold">
+          <h3 className="text-xl text-gray-800 font-bold">
             {item.sessions?.topic || "Session Homework"}
           </h3>
 
@@ -283,7 +283,7 @@ if (progressError) {
                 `/student/sessions/${item.session_id}`
               )
             }
-            className="mt-5 bg-blue-600 text-white px-4 py-2 rounded-lg"
+            className="mt-5 bg-blue-600 text-gray-800 px-4 py-2 rounded-lg"
           >
             View Session Details
           </button>
@@ -294,7 +294,7 @@ if (progressError) {
 </div>
 {/* AI Progress Summary */}
 <div className="mb-10">
-  <h2 className="text-2xl font-bold mb-4">
+  <h2 className="text-2xl text-gray-800 font-bold mb-4">
     My Learning Progress
   </h2>
 
@@ -307,7 +307,7 @@ if (progressError) {
   ) : (
     <div className="bg-purple-50 border rounded-xl p-6">
       <div className="flex justify-between items-center mb-4">
-        <h3 className="text-xl font-bold">
+        <h3 className="text-xl text-gray-800 font-bold">
           AI Progress Summary
         </h3>
 
@@ -327,7 +327,7 @@ if (progressError) {
 
         {/* Session History */}
         <div>
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="text-2xl text-gray-800 font-bold mb-4">
             Session History
           </h2>
 
@@ -338,13 +338,13 @@ if (progressError) {
               </p>
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 text-gray-800 gap-6">
               {completedSessions.map((session) => (
                 <div
                   key={session.id}
                   className="bg-white p-6 rounded-xl shadow"
                 >
-                  <h3 className="text-xl font-bold">
+                  <h3 className="text-xl text-gray-800 font-bold">
                     {session.topic}
                   </h3>
 

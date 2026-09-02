@@ -125,7 +125,7 @@ export default function StudentSessionDetails() {
 
         <div className="bg-white rounded-xl shadow p-6">
 
-          <h1 className="text-3xl font-bold">
+          <h1 className="text-3xl text-gray-800 font-bold">
             {session.topic}
           </h1>
 
@@ -145,7 +145,7 @@ export default function StudentSessionDetails() {
 
           {/* Tutor Notes */}
           <div className="mt-8">
-            <h2 className="text-xl font-bold mb-3">
+            <h2 className="text-xl text-gray-800 font-bold mb-3">
               Tutor Session Notes
             </h2>
 
@@ -158,7 +158,7 @@ export default function StudentSessionDetails() {
           {debrief && (
             <div className="mt-8">
 
-              <h2 className="text-2xl font-bold mb-5">
+              <h2 className="text-2xl text-gray-800 font-bold mb-5">
                 AI Session Review
               </h2>
 
@@ -166,7 +166,7 @@ export default function StudentSessionDetails() {
 
                 {/* Summary */}
                 <div className="bg-blue-50 border rounded-xl p-5">
-                  <h3 className="text-lg font-bold mb-2">
+                  <h3 className="text-lg text-gray-800 font-bold mb-2">
                     Summary
                   </h3>
 
@@ -178,7 +178,7 @@ export default function StudentSessionDetails() {
 
                 {/* Homework */}
                 <div className="bg-yellow-50 border rounded-xl p-5">
-                  <h3 className="text-lg font-bold mb-2">
+                  <h3 className="text-lg text-gray-800 font-bold mb-2">
                     Homework
                   </h3>
 
@@ -190,7 +190,7 @@ export default function StudentSessionDetails() {
 
                 {/* Next Focus */}
                 <div className="bg-purple-50 border rounded-xl p-5">
-                  <h3 className="text-lg font-bold mb-2">
+                  <h3 className="text-lg text-gray-800 font-bold mb-2">
                     Next Focus
                   </h3>
 

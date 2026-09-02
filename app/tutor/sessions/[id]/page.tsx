@@ -634,7 +634,7 @@ export default function SessionDetailsPage() {
 
   if (loading) {
     return (
-      <main className="min-h-screen bg-gray-100 p-8">
+      <main className="min-h-screen bg-gray-800 p-8">
         <p>Loading session...</p>
       </main>
     );
@@ -652,8 +652,8 @@ export default function SessionDetailsPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-100 p-8">
-      <div className="max-w-4xl mx-auto">
+    <main className="min-h-screen bg-gray-800 p-8">
+      <div className="max-w-4xl text-gray-800 mx-auto">
 
         <button
           onClick={() =>
@@ -668,7 +668,7 @@ export default function SessionDetailsPage() {
 
         <div className="bg-white rounded-xl shadow p-6">
 
-          <h1 className="text-3xl font-bold">
+          <h1 className="text-3xl text-gray-800 font-bold">
             {session.topic}
           </h1>
 
@@ -679,7 +679,7 @@ export default function SessionDetailsPage() {
           </p>
 
           <div className="mt-4">
-            <span className="bg-gray-100 px-4 py-2 rounded-full">
+            <span className="bg-gray-400 px-4 py-2 rounded-full">
               Status: {session.status}
             </span>
           </div>
@@ -933,11 +933,11 @@ export default function SessionDetailsPage() {
               {debrief && (
                 <div className="mt-6 bg-white p-5 rounded-lg border">
 
-                  <h2 className="text-xl font-bold mb-3">
+                  <h2 className="text-xltext-gray-800 font-bold mb-3">
                     AI Session Debrief
                   </h2>
 
-                  <div className="whitespace-pre-wrap text-gray-700">
+                  <div className="whitespace-pre-wrap text-gray-800">
                     {debrief}
                   </div>
 
@@ -945,7 +945,7 @@ export default function SessionDetailsPage() {
                     onClick={
                       saveDebrief
                     }
-                    className="mt-5 bg-green-600 text-white px-5 py-3 rounded-lg"
+                    className="mt-5 bg-green-600 text-gray-800 px-5 py-3 rounded-lg"
                   >
                     Save AI Review
                   </button>
@@ -962,35 +962,35 @@ export default function SessionDetailsPage() {
             savedDebrief && (
               <div className="mt-8 bg-purple-50 p-6 rounded-xl border">
 
-                <h2 className="text-2xl font-bold mb-5">
+                <h2 className="text-2xl text-gray-800 font-bold mb-5">
                   AI Session Review
                 </h2>
 
-                <h3 className="font-bold text-lg">
+                <h3 className="font-bold text-gray-800 text-lg">
                   Summary
                 </h3>
 
-                <div className="whitespace-pre-wrap text-gray-700 mt-2">
+                <div className="whitespace-pre-wrap text-gray-800 mt-2">
                   {
                     savedDebrief.summary
                   }
                 </div>
 
-                <h3 className="font-bold text-lg mt-6">
+                <h3 className="font-bold text-gray-800 text-lg mt-6">
                   Homework
                 </h3>
 
-                <div className="whitespace-pre-wrap text-gray-700 mt-2">
+                <div className="whitespace-pre-wrap text-gray-800 mt-2">
                   {
                     savedDebrief.homework
                   }
                 </div>
 
-                <h3 className="font-bold text-lg mt-6">
+                <h3 className="font-bold text-gray-800 text-lg mt-6">
                   Next Focus
                 </h3>
 
-                <div className="whitespace-pre-wrap text-gray-700 mt-2">
+                <div className="whitespace-pre-wrap text-gray-800 mt-2">
                   {
                     savedDebrief.next_focus
                   }

@@ -147,7 +147,7 @@ export default function TutorDashboard() {
               Total Students
             </p>
 
-            <p className="text-3xl font-bold mt-2">
+            <p className="text-3xl text-gray-800 font-bold mt-2">
               {students.length}
             </p>
           </div>
@@ -157,7 +157,7 @@ export default function TutorDashboard() {
               Scheduled
             </p>
 
-            <p className="text-3xl font-bold mt-2">
+            <p className="text-3xl text-gray-800 font-bold mt-2">
               {scheduledCount}
             </p>
           </div>
@@ -167,7 +167,7 @@ export default function TutorDashboard() {
               In Progress
             </p>
 
-            <p className="text-3xl font-bold mt-2">
+            <p className="text-3xl text-gray-800 font-bold mt-2">
               {inProgressCount}
             </p>
           </div>
@@ -177,7 +177,7 @@ export default function TutorDashboard() {
               Completed
             </p>
 
-            <p className="text-3xl font-bold mt-2">
+            <p className="text-3xl text-gray-800 font-bold mt-2">
               {completedCount}
             </p>
           </div>
@@ -187,7 +187,7 @@ export default function TutorDashboard() {
               AI Reviewed
             </p>
 
-            <p className="text-3xl font-bold mt-2">
+            <p className="text-3xl text-gray-800 font-bold mt-2">
               {aiReviewedCount}
             </p>
           </div>
@@ -223,7 +223,7 @@ export default function TutorDashboard() {
         )}
 
         {!loading && students.length === 0 && (
-          <div className="bg-white p-6 rounded-xl shadow">
+          <div className="bg-white text-gray-800 p-6 rounded-xl shadow">
             No students found.
           </div>
         )}
@@ -233,7 +233,7 @@ export default function TutorDashboard() {
           {students.map((student) => (
             <div
               key={student.id}
-              className="bg-white p-6 rounded-xl shadow"
+              className="bg-white text-gray-800 p-6 rounded-xl shadow"
             >
               <h3 className="text-xl font-bold">
                 {student.profiles?.full_name || "Student"}
